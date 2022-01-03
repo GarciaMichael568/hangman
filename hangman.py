@@ -7,4 +7,3 @@ def get_valid_words(words):
         word = random.choice(words)
         
     return word
-    
