@@ -37,6 +37,6 @@ def hangman():
         else:
             print("Invalid character! Please try again!")
     #when len(word_letters == 0)
-    
+    print("Congratulations! You guessed the word: ", ' '.join(word))
 if __name__ == "__main__":
     hangman() 
