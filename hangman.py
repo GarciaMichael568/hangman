@@ -17,9 +17,9 @@ def hangman():
     lives = 6
     #getting user input
     #loop until word is complete: set word_letters length is zero
-    while len(word_letters) > 0:
+    while len(word_letters) > 0 and lives > 0:
         #letters used
-        print('Lives: ', end=" ")
+        print('\nLives: ', end=" ")
         for x in range(lives): 
             print ('\u2764',end=" ")
         print('\nYou have used these letters: ', ' '.join(used_letters))
@@ -42,7 +42,10 @@ def hangman():
         #User input invalid character
         else:
             print("Invalid character! Please try again!")
-    #when len(word_letters == 0)
-    print("Congratulations! You guessed the word: ", ' '.join(word))
+    #when len(word_letters == 0) or when lives == 0
+    if lives == 0:
+        print("You suck! The word was", word)
+    else:
+        print("Congratulations! You guessed the word: ", ' '.join(word))
 if __name__ == "__main__":
     hangman() 
